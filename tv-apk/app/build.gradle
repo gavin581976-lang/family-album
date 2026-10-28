@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.linzhe.familyalbum'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.linzhe.familyalbum"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+// 零第三方依赖:只用 Android 自带 API (ImageView/VideoView/HttpURLConnection/org.json)
+dependencies {
+}

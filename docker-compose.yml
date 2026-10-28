@@ -1,0 +1,10 @@
+services:
+  album:
+    build: ./server
+    container_name: family-album
+    ports:
+      - "8787:8787"
+    volumes:
+      # ↓ 改成您极空间里照片库的实际路径(手机自动备份的目标文件夹)
+      - /极空间照片文件夹:/media:ro
+    restart: unless-stopped
